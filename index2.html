@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoJSON Loader</title>
+</head>
+<body>
+    <h1>GeoJSON Data Loaded</h1>
+    
+    <script>
+        fetch("/Users/matteosantillo/Desktop/basicHTML/output.geojson")  
+            .then(response => response.json())
+            .then(json => {
+                window.data = json;  
+                console.log("GeoJSON loaded:", data);
+            })
+    </script>
+</body>
+</html>
